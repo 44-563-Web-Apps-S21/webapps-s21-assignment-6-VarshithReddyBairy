@@ -36,6 +36,48 @@ function permutations (){
     document.getElementById("result").innerHTML = num1 + " permute "+num2 +" should be "+product
 }
 </script>
+<form>
+    <input type ="radio" id = "add" name = "arith_oper" onclick="processRadio()">
+    <label for ="add" >+</label><br>
+    <input type ="radio" id = "minus" name = "arith_oper" onclick="processRadio()">
+    <label for ="minus" >-</label><br>
+    <input type ="radio" id = "multiply" name = "arith_oper" onclick="processRadio()">
+    <label for ="multiply" >*</label><br>
+    <input type ="radio" id = "devide" name = "arith_oper" onclick="processRadio()">
+    <label for ="devide" >/</label><br>
 
+
+</form>
+<p id = "res">Results of Radio buttons will be shown here</p>
+<script>
+    function processRadio(){
+        num1 = document.getElementById("first_num").value
+         num2 = document.getElementById("Second_num").value
+         result = 0
+         text = ""
+        if(document.getElementById("add").checked == true)
+        {
+            result = +num1 + +num2
+            text = "sum of " +num1+" and " +num2+ " is "+result
+        }
+       else if(document.getElementById("minus").checked == true)
+        {
+            result = num1 - num2
+            text = "Difference of " +num1+" and " +num2+ " is "+result
+        }
+        else if(document.getElementById("multiply").checked == true)
+        {
+            result = num1  * num2
+            text = "Product of " +num1+" and " +num2+ " is "+result
+        }
+        else if(document.getElementById("devide").checked =true)
+        {
+            result = num1/num2
+            text = "Division of " +num1+" and " +num2+ " is "+result
+        }
+        document.getElementById("res").innerHTML = text
+
+    }
+</script>
 </body>
 </html> 
