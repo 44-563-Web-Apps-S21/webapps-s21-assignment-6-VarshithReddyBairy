@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
  <head>
      <title>Hidden Things</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
  </head>
 <body>
 <h1>Hidden things by Varshith Reddy Bairy</h1>
-<h2>Getting input</h2>
 
+<div class = "container bg-primary border   ">
 <form>
     <label for="form1_password">Enter the Secret Word </label>
     <input type ="password" id="form1_password" name="form1_password" min=10 max=50 step=2 value="Secret"> <br>
@@ -17,8 +23,12 @@
     <input type="button" onclick="processGuess()" value="Check the guess">
 </form>
 
+</div>
+<div class = "container border">
+    <p class ="text-success" id="result">This text will be replaced </p>
+</div>
 
-<p id="result">This text will be replaced </p>
+
 
 <script> 
 let correct =0;
@@ -63,7 +73,7 @@ function processGuess (){
         }
     }
 </script>
-<div class ="container">
+<div class ="container bg-light">
     <img  id ="image" src="images/rose.jpg" alt ="rose" height="200" width="200" onclick="rotateImage()">
     
 </div>
